@@ -1,10 +1,10 @@
 {
-  "name": "401-js-proof-of-life",
+  "name": "vendor",
   "version": "1.0.0",
-  "description": "Proof of Life",
-  "main": "caps.js",
+  "description": "vendor",
+  "main": "vendor.js",
   "scripts": {
-    "start": "node caps.js",
+    "start": "node vendor.js",
     "lint": "eslint '**/*.js'",
     "debug": "node --nolazy --inspect-brk=9229 myProgram.js",
     "test": "jest --verbose --coverage --detectOpenHandles",
