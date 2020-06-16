@@ -1,6 +1,6 @@
-# LAB - 16
+# LAB - 17
 <!-- ## Project: Project Name Here -->
-## Event Driven Applications
+## TCP Server / Message Application
 
 ### Author: Abdallah Obaid
 
@@ -17,11 +17,11 @@
 <!-- * [swagger](https://app.swaggerhub.com/apis/AbdallahObaid/class-06/0.1)  -->
 
 ### Modules
-#### `events.js`.
+<!-- #### `events.js`. -->
 ##### Exported Values and Methods
 
-###### `events.js`
-This is to require the event and use it in the other files.
+<!-- ###### `events.js`
+This is to require the event and use it in the other files. -->
 
 ### Setup
 
@@ -32,11 +32,11 @@ storeName=AbuAlFalafel
 #### How to initialize/run your application 
 
 * `npm init -y`
-*  use git,postman or sawgger to use crud methods.
+<!-- *  Use git,postman or sawgger to use crud methods. -->
 
 #### How to use your library (where applicable)
 <!-- * use const lib=require('lib') -->
-const basic = require('../events');
+<!-- const basic = require('../events'); -->
 
 
 #### Tests
@@ -48,4 +48,4 @@ const basic = require('../events');
 
 #### UML
 
-![UML Diagram](whiteboardclass16.jpg)
+![UML Diagram](whiteboardclass17.jpg)
