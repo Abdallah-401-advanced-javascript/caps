@@ -6,9 +6,9 @@
 
 ### Links and Resources
 
-* [submission PR](https://github.com/Abdallah-401-advanced-javascript/caps/pull/1)
-* [travis](https://github.com/Abdallah-401-advanced-javascript/caps/pull/1/checks?check_run_id=771355453)
-* [ci/cd](https://github.com/Abdallah-401-advanced-javascript/caps/pull/1/checks?check_run_id=771358031)
+* [submission PR](https://github.com/Abdallah-401-advanced-javascript/caps/pull/2)
+* [travis](https://github.com/Abdallah-401-advanced-javascript/caps/pull/2/checks?check_run_id=775094621)
+* [ci/cd](https://github.com/Abdallah-401-advanced-javascript/caps/pull/2/checks?check_run_id=775094661)
 <!-- - [back-end server url](http://xyz.com) (when applicable) -->
 <!-- * [front-end application](https://abdallah-lab-00.herokuapp.com/)  -->
 
