@@ -16,6 +16,7 @@ server.on('connection', (socket)=> {
   // add the socket objec to the SocketPool Object
   console.log(`client with ID : ${id} is connected!!! `);
   socketPool[id] = socket;
+  // console.log(socketPool);
   // Here we got the data from the vendor and handle it with the 'dispatchEvent()'function.
   socket.on('data', (buffer)=> dispatchEvent(buffer));
   
@@ -48,7 +49,11 @@ function pickup(data) {
 // This function will store data in socket to use it in vendor and driver using '.write' method
 function broadcast(msg) {
   let event = JSON.stringify(msg);
+  let counter = 0;
   for (let key in socketPool) {
+    counter++;
+    if (counter==2){
+      break;}
     socketPool[key].write(event);
   }
 }
