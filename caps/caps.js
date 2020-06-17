@@ -32,41 +32,23 @@ server.on('error', (e)=> {
 
 // This function will handle the data that we got from vendor and console it.
 function dispatchEvent(buffer) {
-  let payload = JSON.parse(buffer.toString().trim());
-  payload.id=uuidv4();
-  pickup('pickup', payload);
-  transit('transit', payload);
-  delivered('delivered', payload);
+  let data = JSON.parse(buffer.toString().trim());
+  data.payload.id=uuidv4();
+  pickup(data);
 }
 
-function pickup(event, payload) {
-  // payload.id=uuidv4();
+function pickup(data) {
   let time = new Date();
-  console.log({Event:{event, time, payload}});
-  payload.event=event;
-  broadcast(payload);
-}
-function delivered(event, payload) {
-  // payload.id=uuidv4();
-  // console.log(`DRIVER: delivered up ${payload.id}`);
-  // console.log(`VENDOR: Thank you for delivering ${payload.id}`);
-  let time = new Date();
-  console.log({Event:{event, time, payload}});
-  payload.event=event;
-  broadcast(payload);
-}
-function transit(event, payload) {
-  // payload.id=uuidv4();
-  let time = new Date();
-  console.log({Event:{event, time, payload}});
-  payload.event=event;
-  broadcast(payload);
+  let event = data.event;
+  let payload =data.payload;
+  console.log('Event',{event,time, payload});
+  broadcast(data);
 }
 
 // This function will store data in socket to use it in vendor and driver using '.write' method
 function broadcast(msg) {
-  let payload = JSON.stringify(msg);
-  for (let socket in socketPool) {
-    socketPool[socket].write(payload);
+  let event = JSON.stringify(msg);
+  for (let key in socketPool) {
+    socketPool[key].write(event);
   }
 }
