@@ -7,15 +7,16 @@ const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
 client.connect(PORT, HOST, ()=> {console.log('logger got connected');});
 const faker = require('faker');
-
+const STORENAME = process.env.STORENAME;
 // Send the fake order data to server using client.write every 5 min==>
 setInterval(
   function () {
-    let obj={storeName:process.env.storeName,
+    let obj={storeName:STORENAME,
       customerName:faker.name.findName(),
       address:faker.address.streetAddress(),
     };
-    let event = JSON.stringify(obj);
+    let message={event :'pickup',payload:obj}
+    let event = JSON.stringify(message);
     client.write(event);
   },5000);
 
@@ -25,7 +26,7 @@ client.on('data', function(data){
   let eventObj = JSON.parse(data);
   if (eventObj.event == 'delivered') {
     console.clear();
-    messages.push(eventObj.id);
+    messages.push(eventObj.payload.id);
     messages.forEach(msg=> console.log(`Thank you for delivering ${msg}`));
   }
 });
