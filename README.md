@@ -1,4 +1,4 @@
-# LAB - 17
+# LAB - 18
 <!-- ## Project: Project Name Here -->
 ## TCP Server / Message Application
 
@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-* [submission PR](https://github.com/Abdallah-401-advanced-javascript/caps/pull/2)
+* [submission PR](https://github.com/Abdallah-401-advanced-javascript/caps/pull/5)
 * [travis](https://github.com/Abdallah-401-advanced-javascript/caps/pull/2/checks?check_run_id=775094621)
 * [ci/cd](https://github.com/Abdallah-401-advanced-javascript/caps/pull/2/checks?check_run_id=775094661)
 <!-- - [back-end server url](http://xyz.com) (when applicable) -->
@@ -41,11 +41,11 @@ storeName=AbuAlFalafel
 
 #### Tests
 
-* Unit Tests: `npm test`
+<!-- * Unit Tests: `npm test` -->
 * Lint Tests: `npm run lint`
 
 <!-- Incomplete Tests: -->
 
 #### UML
 
-![UML Diagram](whiteboardclass17.jpg)
+![UML Diagram](whiteboardclass18.jpg)
