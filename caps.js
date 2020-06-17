@@ -17,7 +17,6 @@ function transit(event, payload) {
   console.log('Event',{event, time, payload});
 }
 function delivered(event, payload) {
-  // console.log(`VENDOR: Thank you for delivering ${payload.id}`);
   let time = new Date();
   console.log('Event',{event, time, payload});
 }

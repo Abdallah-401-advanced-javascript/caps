@@ -5,7 +5,6 @@ require('dotenv').config();
 const events = require('./events');
 const faker = require('faker');
 require('./caps');
-// setInterval(function(){require('./driver');},1000);
 events.on('delivered', payload =>  console.log(`VENDOR: Thank you for delivering ${payload.id}`));
 // user fake order every 5 min==>
 setInterval(function(){events.emit('pickup', {
