@@ -34,7 +34,7 @@ server.on('error', (e)=> {
 // This function will handle the data that we got from vendor and console it.
 function dispatchEvent(buffer) {
   let data = JSON.parse(buffer.toString().trim());
-  data.payload.id=uuidv4();
+  // data.payload.id=uuidv4();
   pickup(data);
 }
 
@@ -49,11 +49,7 @@ function pickup(data) {
 // This function will store data in socket to use it in vendor and driver using '.write' method
 function broadcast(msg) {
   let event = JSON.stringify(msg);
-  let counter = 0;
   for (let key in socketPool) {
-    counter++;
-    if (counter==2){
-      break;}
     socketPool[key].write(event);
   }
 }
